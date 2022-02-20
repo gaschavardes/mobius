@@ -109,7 +109,7 @@ export default class Stack{
       this.null.rotation.set(this.rotation[0], this.rotation[1], this.rotation[2] - time)
       this.spheres.forEach((el) => {
         el.newY = el.originalPos[0] * Math.sin(this.rotation[2] - time) + el.originalPos[1] * Math.cos(this.rotation[2] - time)
-        let scale = el.originalScale + ( 0.1 + el.newY) * 0.09
+        let scale = el.originalScale + ( 0.2 + el.newY) * 0.09
         el.scale.set(scale, scale, scale)
       })
     }
