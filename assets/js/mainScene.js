@@ -41,7 +41,7 @@ class Scene {
 
     this.gl.clearColor(1, 0, 0, 0)
     this.camera = new Camera(this.gl, {
-      fov: 35
+      fov: 15
     })
     
 
@@ -91,12 +91,12 @@ class Scene {
   }
 
   resize () {
-    if (!this.isMobile) {
+    // if (!this.isMobile) {
       this.container.style.height = window.innerHeight + 'px'
       this.container.style.width = window.innerWidth + 'px'
       this.renderer.setSize(window.innerWidth, window.innerHeight);
       this.camera.perspective({ aspect: this.gl.canvas.width / this.gl.canvas.height });
-    }
+    // }
   }
 
 
