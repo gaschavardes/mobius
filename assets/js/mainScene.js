@@ -80,9 +80,7 @@ class Scene {
       let z = this.radius * Math.sin(2 * Math.PI / (this.count / i));
       let degX = (2 * Math.PI / (this.count / i))
       let degZ = (Math.PI * 2) / (this.count / i)
-      
       let stack = new Stack(this, new Vec3(0, y, z), new Vec3(degX, 0 , degZ))
-      // let stack = new Stack(this, new Vec3(0, 0, 0), new Vec3(0, 0 , 0))
       this.stacks.push(stack)
     }
   }
@@ -140,7 +138,6 @@ class Scene {
       camera: this.camera
     })
   }
-
 }
 const out = new Scene()
 export default out

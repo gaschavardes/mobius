@@ -16,19 +16,15 @@ export default class Stack{
         this.init()
     }
     init(){
-        console.log('INIT')
         this.createNull()
         this.setBubbles()
     }
     createNull() {
-        // console.log(this.position, this.rotation)
         let geometry = new Plane(this.ctx.gl);
 
         let program = new Program(this.ctx.gl, {
             vertex: planeVert,
             fragment: planeFrag,
-
-            // Don't cull faces so that plane is double sided - default is gl.BACK
             cullFace: null,
         });
         this.null = new Mesh(this.ctx.gl, { geometry: geometry, program });
@@ -53,14 +49,9 @@ export default class Stack{
             let program = new Program(this.ctx.gl, {
                 vertex: bubbleVert,
                 fragment: bubbleFrag,
-                
-                // Don't cull faces so that plane is double sided - default is gl.BACK
                 cullFace: null,
 
                 uniforms: {
-                  // uColor: {
-                  //   value: new Vec3(1, 0.5, 0),
-                  // },
                   uNormalScale: { value: 2 },
                   uNormalUVScale: { value: 1 },
                   tMap: { value: this.textureBase },
