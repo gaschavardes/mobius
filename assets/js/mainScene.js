@@ -41,7 +41,7 @@ class Scene {
 
     this.gl.clearColor(1, 0, 0, 0)
     this.camera = new Camera(this.gl, {
-      fov: 15
+      fov: 35
     })
     
 
