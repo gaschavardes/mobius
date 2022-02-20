@@ -1,6 +1,6 @@
 <template>
   <div class="tpl-home">
-    coucou 4
+    <h1>Mobius Test</h1>  
     <!-- <img :src="require(`../../static/images/${datas.projects[0].image}`)" alt=""> -->
   </div>
 </template>

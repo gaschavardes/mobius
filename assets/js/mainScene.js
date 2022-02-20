@@ -82,6 +82,7 @@ class Scene {
       let degZ = (Math.PI * 2) / (this.count / i)
       
       let stack = new Stack(this, new Vec3(0, y, z), new Vec3(degX, 0 , degZ))
+      // let stack = new Stack(this, new Vec3(0, 0, 0), new Vec3(0, 0 , 0))
       this.stacks.push(stack)
     }
   }
