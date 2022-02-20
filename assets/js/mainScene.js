@@ -63,7 +63,7 @@ class Scene {
     })
 
 
-    this.camera.position.set(12, 0, 0)
+    this.camera.position.set(this.isMobile ? 20 : 12, 0, 0)
     this.camera.lookAt([0, 0, 0])
     this.controls = new Orbit(this.camera);
     this.scene = new Transform()
