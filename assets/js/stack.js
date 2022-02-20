@@ -75,7 +75,7 @@ export default class Stack{
                     value: 0.4
                   },
                   shininessVal: {
-                    value: 1
+                    value: 80
                   },
                   ambientColor: {
                     value: new Vec3(1, 1, 1),
